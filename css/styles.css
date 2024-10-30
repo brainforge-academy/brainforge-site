@@ -1,8 +1,9 @@
+/* General Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: 'HK Grotesk', sans-serif;
 }
 
 body, html {
@@ -11,8 +12,9 @@ body, html {
     align-items: center;
     justify-content: center;
     color: white;
-    background: linear-gradient(rgba(0, 0, 50, 0.7), rgba(0, 0, 50, 0.7)), url('../images/indexpage-background.png') center/cover no-repeat;
-    font-smoothing: antialiased;
+    background: linear-gradient(rgba(35, 61, 255, 0.7), rgba(35, 61, 255, 0.7)), url('../images/indexpage-background.png') center/cover no-repeat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     overflow: hidden; /* Prevents unwanted scroll */
 }
 
@@ -50,13 +52,12 @@ nav a:hover {
     background-color: white;
     border-radius: 50%;
     display: inline-block;
-    padding: 10px;
+    padding: 20px; /* Increase padding to make circle bigger */
 }
 
 .logo img {
     width: 150px;
     height: auto;
-    border-radius: 50%;
 }
 
 h1 {
