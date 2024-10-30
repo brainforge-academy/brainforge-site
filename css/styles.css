@@ -16,6 +16,7 @@ body, html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden; /* Prevents unwanted scroll */
+    position: relative; /* Added position relative */
 }
 
 body::before {
@@ -26,13 +27,15 @@ body::before {
     width: 100%;
     height: 100%;
     background: rgba(35, 61, 255, 0.7); /* Single overlay */
-    z-index: -1;
+    z-index: 0; /* Set the overlay behind content */
 }
 
 .container {
     text-align: center;
     max-width: 900px;
     padding: 20px;
+    position: relative; /* Ensures content is above overlay */
+    z-index: 1; /* Ensures content is above overlay */
 }
 
 nav {
@@ -67,7 +70,7 @@ nav a:hover {
 }
 
 .logo img {
-    width: 180px; /* Slightly larger logo */
+    width: 200px; /* Slightly larger logo */
     height: auto;
 }
 
@@ -149,6 +152,6 @@ h1 {
 
 @media (min-width: 1024px) {
     .logo img {
-        width: 250px;
+        width: 200px;
     }
 }
