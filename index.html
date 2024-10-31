@@ -3,39 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BrainForge Learning Solutions</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- Favicon -->
-    <!-- Include Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <div class="logo-circle">
-                    <img src="images/BLS-Logowobg.png" alt="BrainForge Logo" loading="lazy"> <!-- Lazy loading -->
-                </div>
+    <!-- Navigation Menu for Quick Access to Sections -->
+    <nav class="nav-buttons">
+        <button onclick="scrollToSection('home')">Home</button>
+        <button onclick="scrollToSection('about')">About Us</button>
+        <button onclick="scrollToSection('services')">Services Offered</button>
+        <button onclick="scrollToSection('testimonials')">Testimonials</button>
+        <button onclick="scrollToSection('contact')">Contact Us</button>
+    </nav>
+
+    <!-- Home Page with Horizontal Scrolling Images -->
+    <div id="home" class="main-gallery">
+        <div class="horizontal-scroll">
+            <!-- First Home Page Image -->
+            <div class="main-image">
+                <img src="image1.jpg" alt="Main Image 1">
             </div>
-            <h1>BrainForge Learning Solutions</h1>
-            <p class="tagline">A Career Coaching & Skill Development Company</p>
-            <p class="slogan">"Where minds ignite & futures are forged like steel"</p>
-            <nav>
-                <ul>
-                    <li><a href="index.html" aria-label="Home">Home</a></li>
-                    <li><a href="testyourenglish.html" aria-label="Test Your English">Test Your English</a></li>
-                    <li><a href="#" aria-label="About us">About us</a></li>
-                    <li><a href="#" aria-label="Services">Services</a></li>
-                    <li><a href="#" aria-label="Testimonials">Testimonials</a></li>
-                    <li><a href="#" aria-label="Blog">Blog</a></li>
-                    <li><a href="#" aria-label="Contact us">Contact us</a></li>
-                </ul>
-            </nav>
-            <div class="buttons">
-                <a href="#" class="button register">Register Now</a>
-                <a href="#" class="button learn-more">Learn More</a>
+            <!-- Second Home Page Image with Test Your English Button -->
+            <div class="main-image">
+                <img src="image2.jpg" alt="Main Image 2">
+                <a href="https://example.com/test-your-english" class="test-button">Test Your English</a>
             </div>
         </div>
-    </header>
+    </div>
+
+    <!-- About Us Section -->
+    <div id="about" class="section">
+        <img src="image3.jpg" alt="About Us">
+    </div>
+
+    <!-- Services Offered Section -->
+    <div id="services" class="section">
+        <img src="image4.jpg" alt="Services Offered">
+    </div>
+
+    <!-- Testimonials Section -->
+    <div id="testimonials" class="section">
+        <img src="image5.jpg" alt="Testimonials">
+    </div>
+
+    <!-- Contact Us Section with Register Now Button -->
+    <div id="contact" class="section">
+        <img src="image6.jpg" alt="Contact Us">
+        <a href="https://example.com/register" class="register-button">Register Now</a>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
