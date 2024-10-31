@@ -3,55 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>BrainForge Learning Solutions</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=HK+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation Menu for Quick Access to Sections -->
-    <nav class="nav-buttons">
-        <button onclick="scrollToSection('home')">Home</button>
-        <button onclick="scrollToSection('about')">About Us</button>
-        <button onclick="scrollToSection('services')">Services Offered</button>
-        <button onclick="scrollToSection('testimonials')">Testimonials</button>
-        <button onclick="scrollToSection('contact')">Contact Us</button>
-    </nav>
-
-    <!-- Home Page with Horizontal Scrolling Images -->
-    <div id="home" class="main-gallery">
+    <div class="horizontal-container">
         <div class="horizontal-scroll">
-            <!-- First Home Page Image -->
-            <div class="main-image">
-                <img src="image1.jpg" alt="Main Image 1">
+            <div class="section">
+                <img src="images/image1.jpg" alt="Main Page 1">
+                <nav>
+                    <a href="#about">About Us</a>
+                    <a href="#services">Services Offered</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#contact">Contact Us</a>
+                </nav>
             </div>
-            <!-- Second Home Page Image with Test Your English Button -->
-            <div class="main-image">
-                <img src="image2.jpg" alt="Main Image 2">
-                <a href="https://forms.gle/BVchZXe4aojxwnkX8" class="test-button">Test Your English</a>
+            <div class="section">
+                <img src="images/image2.jpg" alt="Main Page 2">
+                <a href="https://forms.gle/BVchZXe4aojxwnkX8" class="button test-english">Test Your English</a>
             </div>
         </div>
     </div>
-
-    <!-- About Us Section -->
-    <div id="about" class="section">
-        <img src="image3.jpg" alt="About Us">
+    <div class="vertical-container">
+        <section id="about">
+            <img src="images/image3.jpg" alt="About Us">
+        </section>
+        <section id="services">
+            <img src="images/image4.jpg" alt="Services Offered">
+        </section>
+        <section id="testimonials">
+            <img src="images/image5.jpg" alt="Testimonials">
+        </section>
+        <section id="contact">
+            <img src="images/image6.jpg" alt="Contact Us">
+            <a href="https://forms.gle/cQLyUvNAuMZsXXGP8" class="button register-now">Register Now</a>
+        </section>
     </div>
-
-    <!-- Services Offered Section -->
-    <div id="services" class="section">
-        <img src="image4.jpg" alt="Services Offered">
-    </div>
-
-    <!-- Testimonials Section -->
-    <div id="testimonials" class="section">
-        <img src="image5.jpg" alt="Testimonials">
-    </div>
-
-    <!-- Contact Us Section with Register Now Button -->
-    <div id="contact" class="section">
-        <img src="image6.jpg" alt="Contact Us">
-        <a href="https://forms.gle/cQLyUvNAuMZsXXGP8" class="register-button">Register Now</a>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>

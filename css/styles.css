@@ -1,119 +1,102 @@
-/* Body and Layout */
-body {
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    -webkit-user-select: none; /* Safari support */
-    user-select: none;
+    box-sizing: border-box;
+    font-family: 'HK Grotesk', sans-serif;
 }
 
-/* Navigation Buttons */
-.nav-buttons {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    gap: 10px;
-}
-
-.nav-buttons button {
-    padding: 10px 20px;
-    font-size: 16px;
-    border: none;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    -webkit-user-select: none; /* Safari support */
-    user-select: none;
-}
-
-.nav-buttons button:hover {
-    background-color: #555;
-}
-
-/* Main Gallery - Horizontal Scroll */
-.main-gallery {
+body, html {
+    height: 100%;
     overflow: hidden;
+}
+
+.horizontal-container {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 400px;
+    height: 50%;
+    overflow: hidden;
     position: relative;
 }
 
 .horizontal-scroll {
     display: flex;
-    transition: transform 1s ease;
-    width: calc(100% * 2); /* For two images */
+    flex-direction: row;
+    width: 200%;
+    height: 100%;
+    animation: scroll-horizontal 10s linear infinite;
 }
 
-.horizontal-scroll img {
-    width: 100%;
-    flex-shrink: 0;
-    height: auto;
-}
-
-/* Section Styling */
 .section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 40px 0;
+    width: 50%;
+    height: 100%;
+    position: relative;
 }
 
 .section img {
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
 }
 
-/* Test Your English Button on Home Page */
-.test-button {
+nav {
     position: absolute;
-    bottom: 10px;
-    right: 10px;
-    padding: 8px 12px;
-    font-size: 14px;
-    background-color: #333;
-    color: #fff;
+    top: 10%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+nav a {
+    color: white;
     text-decoration: none;
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.test-button:hover {
-    background-color: #555;
+nav a:hover {
+    background-color: #ffcc00;
 }
 
-/* Register Now Button on Contact Us Page */
-.register-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+.button {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+    background-color: #4169e1;
+    color: white;
     text-decoration: none;
+    padding: 15px 30px;
     border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
-.register-button:hover {
-    background-color: #0056b3;
+.button:hover {
+    background-color: #314dbd;
 }
 
-/* Custom Scrollbar Styling for Cross-Browser Compatibility */
-/* Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: #888 #ddd;
+.vertical-container {
+    height: 50%;
+    overflow-y: auto;
 }
 
-/* Chrome, Safari, Edge */
-::-webkit-scrollbar {
-    width: 8px;
+.vertical-container section {
+    height: 100vh;
 }
-::-webkit-scrollbar-track {
-    background: #ddd;
+
+.vertical-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-::-webkit-scrollbar-thumb {
-    background-color: #888;
-    border-radius: 10px;
+
+/* Keyframes for horizontal scrolling */
+@keyframes scroll-horizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
